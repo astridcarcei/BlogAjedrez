@@ -6,7 +6,17 @@
  - Header
  - Main
  - Sections
- - Footer  */
+ - Footer  
+*/
+
+/* -------Reset CSS / Normalizador------ */
+/* Descripción: Restablece de los estilos predeterminados para lograr coherencia en los navegadores.
+Estructura:
+    - General para todos los elementos
+    - li: restablece el estilo general de las listas
+    - html: ajustes de html
+    - Reset de images
+*/
 *{
     margin:0;
     padding: 0;
@@ -61,6 +71,13 @@ blockquote:before, blockquote:after, q:before, q:after {
     content: "";
     content: none;
   }
+
+/* -------Fonts------ */
+/* Descripción: definicio de fonds para paginas.
+Estructura:
+    - Font-face Tipografia Para titulo
+    - Font-face Tipografia para cuerpo de texto
+*/
 /* Tipografia Para titulos  */
 @font-face {
     font-display: swap;
@@ -128,6 +145,12 @@ Estructura :
     - Header: Define el display y la estructura de la cabecera su position sticky y z-index 2 para mantenerse en la parte superior de la página
     - Header-h1: con sub elementos a e img para el logo
     - Header-nav: Sub elementos ul, li y a para la navegación animacion de barra con pseudo-elemento
+    - Header-logo: estilo de logo de redireccion a pagina inicio
+    - Header-img: estilo imagen de logo de inicio
+    - Header-ul: estilo de la lista no ordenada
+    - Header-li: estilo del contenido de la lista del menu
+    - Header-a: estilo de los campos de la lista menus
+    - Header-span: Contenedor de la información
     - Header-boton: Trabajando con pseudo-clase para la animación del boton de menú
 */
 
@@ -281,18 +304,21 @@ Estructura :
     }
 }
 
+
 /* -------Header------ */
 /* Estilos generales de las secciones con la clase Section */
-
-
 /* Estilos generales de las secciones */
 /* -------Parallax------ */
 /* Descripción: Estilos para la galeria de imagenes en el inicio de la página 
 Estructura : 
-    - Section: 
-    - Section-h2: 
-    - Section-p: 
+    - Section: estilo general para la bienvenida y introducción general de la página
+    - Section-inicio: estilo para el titulo principal del home page
+    - Section-header: contenedor para titulo sector inicial
+    - Section-h2: estilos de tipografica para el titulo de la pagina
+    - Section-h3: tipografica para titulo de bienvenida
+    - Section-p: tipografica para mensaje de bienvenida
     - Section-parallax: background para efecto parallax
+    - Section-a: estilos para carta de presentacion "about me"
 */
 /* -------Parallax------ */
 
@@ -361,7 +387,15 @@ Estructura :
 .Section-a:hover{
      background-color: var(--color-accent-cream);
      color: var(--color-accent-sage)   }
-/* -------Parallax------ */
+/* -------Animacion------ */
+/* Descripción: Estilos para la animación en el inicio de la página
+Estructura : 
+    - Animation: Seccion para las animacion de la pagina principal
+    - Animation-h3: Titulo animado
+    - Animation-img: Imagenes animadas con una clase que engloba ambas imagenes(Animation-img)
+    - Animation-img--reverse: Para la animación de la imagen en sentido contrario
+*/
+
 /* Imagen de fondo con background-attachment:fixed para efecto parallax al bajar la página */
 .Inicio-parallax{
     width: 100%;
@@ -392,13 +426,21 @@ Estructura :
 /* -------Parallax------ */
 
 /* -------Animacion------ */
-/* Descripción: Estilos para la animación en el inicio de la página
+
+/* -------Galeria------ */
+/* Descripción: Estilos para la galeria de imagenes en el inicio de la página 
 Estructura : 
-    - Animation: Seccion 
-    - Animation-h3: Titulo animado
-    - Animation-img: Imagenes animadas con una clase que engloba ambas imagenes(Animation-img)
-    - Animation-img--reverse: Para la animación de la imagen en sentido contrario
+    - Galeria: Seccion 
+    - Galeria-slider:Contenedor de la galeria 
+    - Galeria-container: Contenedor para presentacion de las imagenes
+    - Galeria-img: Imagenes de la galeria
+    - Galeria-arrow: Botones de navegación
+    - Galeria-arrow--prev: Enlace a la imagen anterior
+    - Galeria-arrow--next: Enlace a la imagen siguiente
+    - Galeria-ul: estilo para contendor de lista de imagenes
+    - Galeria-btn: estilo de botones de la lista de imagenes
 */
+
 .Animation{
     width: 100%;
     background-color: transparent;
@@ -480,11 +522,13 @@ Estructura :
 Estructura : 
     - Galeria: Seccion 
     - Galeria-slider:Contenedor de la galeria 
-    - Galeria-container: Contenedor de las imagenes
+    - Galeria-container: Contenedor para presentacion de las imagenes
     - Galeria-img: Imagenes de la galeria
     - Galeria-arrow: Botones de navegación
     - Galeria-arrow--prev: Enlace a la imagen anterior
     - Galeria-arrow--next: Enlace a la imagen siguiente
+    - Galeria-ul: estilo para contendor de lista de imagenes
+    - Galeria-btn: estilo de botones de la lista de imagenes
 */
 
 
@@ -580,20 +624,28 @@ Estructura :
 
 }
 
-
 /* -------Galeria------ */
-
 
 /* -------About------ */
 /* Descripción: Estilos para la seccion de about  
 Estructura : 
-    - About: Seccion 
-    -  
-    - 
-    - 
-    - 
-    - 
-    - 
+    - About: seccion de about me 
+    - About-title: estilo de seccion del about me
+    - About-container: contendor principal con la informacion del about me
+    - About-wrapper: formateo para carta de presentacion
+    - About-persona: contendor de carta de presentacion
+    - About-foto: estilos para la foto 
+    - About-img: contendor para la foto del about me
+    - About-h3: tipografia de titulos de presentacion
+    - About-p: tipografia y estilo de parrafo inicial
+    - About-redes: contendor de links de referencias a redes sociales
+    - About-h4: estilo para el titulo referente a redes sociales
+    - Redes-h4: tipografia para link de redes sociales
+    - About-bio: contenedor biografico
+    - About-h3--rosa: titulo con formato y estilo con color
+    - About-p--rosa: presentacion de biografia con estilo y color
+    - About-article: contendor de presentacion y lista de servicios
+    - About-resumen: estilo y tipografia de parrafor de resumen
 */
 
 .About{
@@ -782,6 +834,8 @@ la division y disposicion de los Articles-item y su ajuste a responsive*/
     - Articles-foto: Foto del autor del articulo
     - Articles-footer: Contenedor con el enlace al articulo completo
     - Articles-link: Enlace al artículo completo
+    - Articles-intro: tipografia para presentacion 
+    - Articles-shadow: estilos para parrafo de presentacion
 */
 
 .Articles{
@@ -953,11 +1007,17 @@ la division y disposicion de los Articles-item y su ajuste a responsive*/
     }
 }
 
-
-
 /* -------Articles------ */
 
 /* -------Lection------ */
+/* Descripción: Estilos para la seccion de lecciones del blog*/
+/* Estructura : 
+    - Lection: seccion para pagina de lecciones
+    - Lection-title: tipografia del Titulo de la leccion
+    - Lection-p: tipografica y estilo de parrafos de introduccion
+    - Lection-description: Contenedor de presentacion de lecciones
+    - Lection-h3: tipografica de titulo de la seccion
+*/
 .Lection{
     width: 100%;
     min-height: 100vh;
@@ -998,6 +1058,22 @@ la division y disposicion de los Articles-item y su ajuste a responsive*/
     color: var(--color-text-main);
 }
 
+/* -------Acordeon------ */
+/* Descripción: Estilos para el Acordeon usado en el blog*/
+/* Estructura : 
+    - Acordeon: contenedor para el contenedor de acordeon
+    - Acordeon-section: Contenedor del acordeon por leccion
+    - Acordeon-h4: titulo de leccion
+    - Acordeon-button: accion para abrir el acordeon
+    - Acordeon-article: seccion de titulo de topic del acordeon
+    - Acordeon-h5: titulo del topico del acordeon
+    - Acordeon-h6: sub titulo del topico del acordeon
+    - Acordeon-p: parrafo descriptivo del topico
+    - Acordeon-ul: contendor de la lista para el acordeon
+    - Acordeon-li: tipografia para campos de la lista del acordeon
+    - Acordeon-img: contenedor para la imagen del acordeon
+    - Acordeon-imagen: estilos de la imagen del acordeon
+*/
 
 .Acordeon{
     width: 90%;
@@ -1104,6 +1180,8 @@ la division y disposicion de los Articles-item y su ajuste a responsive*/
     }
     
 }
+/* -------Acordeon------ */
+
 .Lection-footer{
     width: 100%; 
 }
@@ -1123,29 +1201,33 @@ la division y disposicion de los Articles-item y su ajuste a responsive*/
  color:lightgray;
 }
 
-
-
-
-
-
-
-
-
-
-
 /*-------Lection------ */
+
 
 /* -------Contacto------ */
 /* Descripción: Estilos para la seccion de Contacto  
 Estructura : 
-    - Contacto-Section: 
-    -  
-    - 
-    - 
-    - 
-    - 
-    - 
+    - Contacto: estilos generales de la pagina principal de contacto
+    - Contacto-title: tipografica para el titulo de la pagina contacto
+    - Contacto-Section: estilo para contendor de formulario
+    - Contacto-container: Contenedor principal de pagina contacto
+    - Contacto-wrapper: definiciones basicas para el contenido de la pagina
+    - Contacto-h3: estilos para titulo de contactame
+    - Contacto-article: estilo para contenedor que abarca foto y detalle de pagina
+    - Contacto-p:estilos para articulo definido en contendor contactame
+    - Contacto-img: estilo para definir caracteristicas de la foto
+    - Contacto-foto: contendor que presentara la foto del usuario
+    - Contacto-info: estilo de contenedor independiente dentro de la pagina para definir informacion del contacto
+    - Contacto-h4: detalle de informacion de contacto
+    - Contacto-redes: contendor que presenta todos los link de las redes sociales
+    - Contacto-h5: tipografia del contenedor del formulario
+    - Contacto-form: estilo del formulario de contacto
+    - Contacto-button: estilo del boton submit
+    - Contacto-textarea: estilo del contenedor de comentarios
+    - Contacto-input: estilo del campo de nombre, email y telefono
+    - Contacto-label: estilo para las etiqueta de los campos del formulario
 */
+
 
 .Contacto{
     width: 100%;
@@ -1319,6 +1401,20 @@ Estructura :
 
 
 /* -------Footer------ */
+/* Descripción: Estilos para el footer de las paginas  
+Estructura : 
+    - Footer: seccion de pie de pagina 
+    - Footer-container: contenedor de pie de pagina
+    - Footer-h: estilo y tipografica de secciones dentro del pie de pagina
+    - Footer-p: estilos para parrafos dentro del pie de pagina
+    - Footer-article: contedor para los enlaces de redes sociales
+    - Footer-nav: contenedor de navegacion de los link de redes sociales
+    - Footer-form: contendor de formulario de subcripcion
+    - Footer-input: estilo de campo de correo de subcripcion
+    - Footer-button: estilo de boton para subcripcion
+    - Footer-copy: seccion de copyright
+    - Footer-text: texto de copyright
+*/
  
 /* Estilos y orden de display del footer y las secciones internas*/
 .Footer {
@@ -1355,7 +1451,13 @@ Estructura :
     gap: .3125rem;
   }
 
-   
+/* -------Redes------ */
+/* Descripción: Estilos para el campo de redes sociales de las paginas  
+Estructura : 
+    - Redes-ul: Seccion para las redes sociales
+    - Redes-li: estilo de la lista de redes sociales
+    - Redes-svg: imagenes de las redes sociales usadas
+*/   
 .Redes-ul {
     display: flex;
     flex-direction: row;
@@ -1370,7 +1472,8 @@ Estructura :
     width: 100%;
     height: 100%;
   }
-  
+  /* -------Redes------ */
+
   .Footer-form {
     
     display: flex;
@@ -1425,6 +1528,5 @@ Estructura :
     }
   
 }
-
 
 /* -------Footer------ */
